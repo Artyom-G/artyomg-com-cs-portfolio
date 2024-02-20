@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {Routes, Route, useLocation} from 'react-router-dom'
 //import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -48,14 +48,16 @@ function App() {
 
 
       {/* main page content */}
-      <Routes>
-        <Route index path = '/' element = {<Home/>}/>
-        <Route index path = '/about' element = {<About/>}/>
-        <Route index path = '/resume' element = {<Resume/>}/>
-        <Route index path = '/skills' element = {<Skills/>}/>
-        <Route index path = '/portfolio' element = {<Portfolio/>}/>
-        <Route index path = '/contact' element = {<Contact/>}/>
-      </Routes>
+      <div className='App__main-page-content'>
+        <Routes>
+          <Route index path = '/' element = {<Home/>}/>
+          <Route index path = '/about' element = {<About/>}/>
+          <Route index path = '/resume' element = {<Resume/>}/>
+          <Route index path = '/skills' element = {<Skills/>}/>
+          <Route index path = '/portfolio' element = {<Portfolio/>}/>
+          <Route index path = '/contact' element = {<Contact/>}/>
+        </Routes>
+      </div>
 
     </div>
   );

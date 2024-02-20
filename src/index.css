@@ -2,12 +2,10 @@
 
 
 :root{
-
-
-    --theme-background-color: #1d1d1d;
-    --theme-main-color: #ffdd40;
-    --theme-sub-text-color: #ffffff;
-    --theme-nav-background-color: #181818;
+    --theme-background-color: #151218;
+    --theme-main-color: #408cff;
+    --theme-sub-text-color: #d9eaf0;
+    --theme-nav-background-color: #1d172b;
 }
 
 *{
