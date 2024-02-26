@@ -1,38 +1,63 @@
 import React from "react";
-import {BsInfoCircleFill} from 'react-icons/bs';
+import { BsInfoCircleFill } from 'react-icons/bs';
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import r from './resume.json';
+import './styles.scss';
 
-const Resume=()=>{
-    return(
+const Resume = () => {
+    return (
         <section id="resume" className="resume">
-            <PageHeaderContent headerText = "My Resume" icon = {<BsInfoCircleFill size = {40}/>}/>
-            <div className="timeline">
-                <div className="timeline__experience">
-                    <h3 className="timeline__experience__header-text">
-                        Experinece
-                    </h3>
-                    <VerticalTimeline layout={'1-column'} lineColor="var(--theme-main-color)">
-                        {data.experience.map((item, i) => {
-                            <VerticalTimeline key = {i} className="timeline__experience__vertical-timeline-element">
-                                <div className="vertical-timeline-element-title-wrapper">
-                                    <h3 className="vertical-timeline-element-title-wrapper">
-                                        {item.title}
-                                    </h3>
-
-                                    <h4 className="vertical-timeline-element-subtitle"></h4>
-                                </div>
-                            </VerticalTimeline>
-                        })}
-                    </VerticalTimeline>
+            <PageHeaderContent headerText = "Resume" icon = {<BsInfoCircleFill size = {40}/>}/>
+            <div className="resume__content">
+                <div className="resume__content__header">
+                    <div className="alt1">
+                        <h1>{r.firstName} {r.lastName}</h1>
+                        <h3>{r.email}  |  {r.phoneNumber}  |  {r.city}, {r.province}</h3>
+                    </div>
                 </div>
-                <div className="timeline__education">
-                    <h3 className="timeline__education__header-text">
-                        Education
-                    </h3>
+                <div className="resume__content__body">
+                    <div className="alt2">
+                        <h2>Education</h2>
+                        <hr/>
+                        <ul>
+                            {
+                                r.education.map((item, i) =>(
+                                    <li key ={i}>
+                                        <p>
+                                            <b>{item.degree} Degree {item.major} Co-op (Ongoing)</b>
+                                        </p>
+                                        <p>
+                                            {item.university}, {item.city}, {item.province}, GPA: {item.GPA}
+                                        </p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <dir className="alt1">
+                    
+                        <h2>Experience</h2>
+                        <hr/>
+                        <ul>
+                            {
+                                r.education.map((item, i) =>(
+                                    <li key ={i}>
+                                        <p>
+                                            <b>{item.degree} Degree {item.major} Co-op (Ongoing)</b>
+                                        </p>
+                                        <p>
+                                            {item.university}, {item.city}, {item.province}, GPA: {item.GPA}
+                                        </p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        
+                    </dir>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 export default Resume;

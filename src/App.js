@@ -7,7 +7,7 @@ import Home from './containers/home';
 import Contact from './containers/contact';
 import Resume from './containers/resume';
 import Skills from './containers/skills';
-import Portfolio from './containers/porfolio';
+import Projects from './containers/projects';
 import About from './containers/about';
 import Navbar from './components/navBar';
 
@@ -54,7 +54,7 @@ function App() {
           <Route index path = '/about' element = {<About/>}/>
           <Route index path = '/resume' element = {<Resume/>}/>
           <Route index path = '/skills' element = {<Skills/>}/>
-          <Route index path = '/portfolio' element = {<Portfolio/>}/>
+          <Route index path = '/projects' element = {<Projects/>}/>
           <Route index path = '/contact' element = {<Contact/>}/>
         </Routes>
       </div>

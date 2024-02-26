@@ -1,7 +1,9 @@
 .navbar{
-    background-color: var(--theme-nav-background-color);
+    box-shadow: var(--box-shadow);
+    background-color: var(--navigation-bar-color);
     height: 80px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     align-items: center;
@@ -17,19 +19,28 @@
         flex: 1;
 
         &__logo{
-            color: var(--theme-main-color);
+            color: var(--navigation-bar-text-color);
             cursor: pointer;
+            z-index: 10;
+            padding-left: 10%;
+            
         }
 
         &__menu{
             display: flex;
             list-style: none;
             text-align: center;
+            padding-right: 10%;
 
             &__item{
                 line-height: 40px;
                 margin-right: 1.5rem;
                 font-size: 1.6rem;
+                margin-top: 5px;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: small;
+                font-family: Arial, Helvetica, sans-serif;
 
                 &::after{
                     content: '';
@@ -42,16 +53,42 @@
 
                 &:hover::after{
                     width: 100%;
-                    background: var(--theme-main-color);
+                    background: var(--navigation-bar-text-color);
                 }
 
                 &__links{
-                    color: var(--theme-main-color);
+                    color: var(--navigation-bar-text-color);
                     text-decoration: none;
                     padding: 0.5rem;
                 }
             }
+
+            &__contact{
+
+                button{
+
+                    box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
+                }
+
+                span{
+                    color: var(--navigation-bar-text-color);
+                }
+
+                button:hover {
+                    box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
+                }
+
+                button:hover:before {
+                    border-color: var(--navigation-bar-text-color);
+                }
+                
+                button:hover:after {
+                    border-color: var(--navigation-bar-text-color);
+                }
+            }
+
         }
+        
     }
 
 
@@ -67,7 +104,7 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        border-top: 1px solid #fff;
+        border-top: 1px solid var(--white-color);
         position: absolute;
         top: 80px;
         left: -110%;
@@ -75,13 +112,13 @@
         transition: all 0.5s ease;
 
         &.active{
-            background: #181818;
+            background: var(--black-color);
             left: 0px;
             opacity: 1;
         }
 
         &__item{
-            border-bottom: 1px solid #282828;
+            border-bottom: 1px solid var(--black-color);
             margin: 0px;
             padding: 20px 0px;
         }
@@ -90,7 +127,7 @@
     .nav-icon{
         display: block;
         cursor: pointer;
-        color: var(--theme-main-color);
+        color: var(--navigation-bar-text-color);
         padding-right: 20px;
     }
 }

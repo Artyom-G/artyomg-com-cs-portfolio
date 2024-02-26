@@ -12,7 +12,7 @@
         justify-content: center;
 
         h1{
-            color: var(--theme-main-color);
+            color: var(--white-color);
             margin: 0px;
             font-weight: 500; 
             font-size: 8rem;
@@ -27,6 +27,18 @@
     &__contact-me{
         display: flex;
         justify-content: center;
+
+        button{
+            margin-top: 15px;
+            width: 680px;
+
+        }
+    }
+
+    /*
+    &__contact-me{
+        display: flex;
+        justify-content: center;
         margin-top: 15px;
 
         button{
@@ -34,18 +46,19 @@
             padding: 10px 70px;
             font-size: 2rem;
             background: transparent;
-            color: var(--theme-main-color);
-            border: 1.5px solid var(--theme-main-color);
+            color: var(--primary-color);
+            border: 1.5px solid var(--primary-color);
             border-radius: 4px;
             font-weight: 500;
 
             &:hover::after{
-                background: var(--theme-main-color);
+                background: var(--primary-hover-color);
                 color: black;
             }
 
         }
     }
+    */
 }
 
 @media only screen and (max-width : 550px){
