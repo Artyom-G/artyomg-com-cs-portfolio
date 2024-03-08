@@ -26,6 +26,76 @@
             }
             
         }
+
+        &__body{
+
+
+            &__education{
+                
+                &__body{
+                    display: flex;
+                    flex-direction: row;
+                    list-style-type: none; // Remove the default bullet point
+                    padding: 0; // Remove any default padding on the list
+    
+                    &__uni{
+                        display: flex;
+                        flex-direction: column;
+    
+                        &__name{
+                            //margin-top: 30px;
+                            //margin-bottom: 10px;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                            text-align: left;
+                            color: var(--primary-color);
+                        }
+    
+                        &__major{
+                            //margin-top: 30px;
+                            //margin-bottom: 0px;
+                            font-size: 1.7rem;
+                            font-weight: 400;
+                            text-align: left;
+                            color: var(--primary-color);
+                        }
+    
+                        &__minor{
+                            margin-top: -20px;
+                            margin-bottom: 10px;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            text-align: left;
+                            color: var(--primary-color);
+                            opacity: 0.7;
+                        }
+    
+                        &__tags{
+                            display: flex;
+                            flex-direction: row;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            color: var(--primary-color);
+                            //opacity: 0.7;
+                            list-style-type: none; 
+                            padding: 0; 
+
+                            li{
+                                margin-right: 30px;
+                            }
+                        }
+    
+                    }
+    
+                    &__unidate{
+                        margin-left: auto;
+                        text-align: right;
+                        
+                    }
+
+                }
+            }
+        }
         
     }
 }
