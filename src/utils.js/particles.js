@@ -4,7 +4,7 @@ const particles = {
         color: {
             value: "#243540"
         },
-        image: "url('https://t4.ftcdn.net/jpg/02/62/67/57/360_F_262675795_qdICSbIxFWPPBUeQSzaVbPoCEgtk9T8p.jpg')",
+        image: "url('https://img.freepik.com/free-vector/background-gradient-green-tones_23-2148360340.jpg')",
         position: "50% 50%",
         repeat: "no-repeat",
         size: "cover",
@@ -14,7 +14,7 @@ const particles = {
         composite: "destination-out",
         cover: {
             color: {
-                value: "#EEDAD1"
+                value: "#15241e"
             },
             opacity: 1
         },
@@ -75,7 +75,7 @@ const particles = {
                 distance: 200
             },
             bubble: {
-                distance: 400,
+                distance: 700,
                 duration: 2,
                 mix: false,
                 opacity: 1,
@@ -278,7 +278,7 @@ const particles = {
                 mode: "delete",
                 value: 0
             },
-            value: 80
+            value: 50
         },
         opacity: {
             value: 0.5,
@@ -314,8 +314,8 @@ const particles = {
         },
         size: {
             value: {
-                min: 50,
-                max: 100
+                min: 90,
+                max: 190
             },
             animation: {
                 count: 0,

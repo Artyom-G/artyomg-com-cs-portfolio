@@ -1,5 +1,5 @@
 import './App.scss';
-import {Routes, Route, useLocation} from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 //import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import particles from './utils.js/particles';
@@ -41,22 +41,22 @@ function App() {
     <div className="App">
       {/* particles js */}
       {
-        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles} particlesLoaded={particlesLoaded}/> : <div/>
+        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles} particlesLoaded={particlesLoaded} /> : <div />
       }
 
       {/* navbar */}
-      <NavbarNew/>
+      <NavbarNew />
 
 
       {/* main page content */}
       <div className='App__main-page-content'>
         <Routes>
-          <Route index path = '/' element = {<Home/>}/>
-          <Route index path = '/about' element = {<About/>}/>
-          <Route index path = '/resume' element = {<Resume/>}/>
-          <Route index path = '/skills' element = {<Skills/>}/>
-          <Route index path = '/projects' element = {<Projects/>}/>
-          <Route index path = '/contact' element = {<Contact/>}/>
+          <Route index path='/' element={<Home />} />
+          <Route index path='/about' element={<About />} />
+          <Route index path='/resume' element={<Resume />} />
+          <Route index path='/skills' element={<Skills />} />
+          <Route index path='/projects' element={<Projects />} />
+          <Route index path='/contact' element={<Contact />} />
         </Routes>
       </div>
 

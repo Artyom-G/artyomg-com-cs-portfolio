@@ -2,6 +2,45 @@
 
 
 :root {
+
+    --primary-color: #093b28;
+    --primary-hover-color: #0e312e;
+    --primary-light-color: #195232;
+
+    --secondary-color: #a6c267;
+    --secondary-hover-color: #5f8d45;
+
+    --tertiary-color: #434D60;
+
+    --text-color: #cac7e7;
+    --text-dark-color: #1e1c33;
+    --text-accent-color: #899dc9;
+    //--text-accent-color: #1C1A23;
+
+    --background-color: #093b28;
+    --background-dark-color: #b8be95;
+
+    --white-color: #f7f8f6;
+    --black-color: #100f0a;
+
+    //--navigation-bar-color: var(--text-color);
+    --navigation-bar-color: #0e493c8f;
+    --navigation-bar-text-color: var(--white-color);
+    --navigation-bar-shadow-color: var(--box-shadow-color);
+
+    //rgba(var(--background-dark-color), 0.6);
+    --banner-color: #d4b5b099;
+    --banner-text-color: var(--primary-hover-color);
+
+    --particle-background: #15241e;
+
+    //--box-shadow-color: rgba(var(--secondary-color), 0.43137254901960786);
+    --box-shadow-color: #0c38348f;
+    --box-shadow-dimensions: 12px 7px 15px 0px;
+    --box-shadow: var(--box-shadow-dimensions) var(--box-shadow-color);
+
+
+    /* Photography Colors
     --primary-color: #383E56;
     --primary-hover-color: #272B3A;
     --primary-light-color: #8B9EC2;
@@ -36,6 +75,8 @@
     --box-shadow-color: #7c60636e;
     --box-shadow-dimensions: 12px 7px 15px 0px;
     --box-shadow: var(--box-shadow-dimensions) var(--box-shadow-color);
+    */
+
         /* CORAL COLORS
     --theme-background-color: #4F091D;
     --theme-main-color: #F5EEDC;
@@ -159,6 +200,11 @@ button {
     border: none;
     border-radius: 100px;
     background: transparent;
+
+    span{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 button {

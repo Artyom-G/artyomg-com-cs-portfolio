@@ -3,10 +3,8 @@ import { FaBars, FaReact } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Logo } from "./artyomg-logo.svg";
 import './styles.scss';
 import RoundLoadButton from "../roundLoadButton";
-import resumePdf from './resume.pdf';
 
 const data = [
     {
@@ -15,7 +13,7 @@ const data = [
     },
     {
         label: 'RESUME',
-        to: {resumePdf}
+        to: '/resume'
     },
     {
         label: 'PROJECTS',
@@ -38,7 +36,7 @@ const NavbarNew = () => {
 
     const navigate = useNavigate();
 
-    const handleNavingateToContactMePage = (link) => {
+    const handleNavingateToPage = (link) => {
         navigate(link);
     }
 
@@ -51,22 +49,15 @@ const NavbarNew = () => {
             <ul className={`navbar__container__menu ${toggleIcon ? 'active' : ""} `} >
                 {
                     data.map((item, key) => (
-                        <li key={key} className="navbar__container__menu__item">
-                            <Link className="navbar__container__menu__item__links" to={item.to}>
-                                {item.label}
-                            </Link>
+                        <li key={key} className="navbar__container__menu__contact">
+                            <button onClick={() => handleNavingateToPage(item.to)}>
+                                <span className="contact-button">
+                                    {item.label}
+                                </span>
+                            </button>
                         </li>
                     ))
                 }
-                <li>
-                    <div className="navbar__container__menu__contact">
-                        <button onClick={() => handleNavingateToContactMePage("/contact")}>
-                            <span className="contact-button">
-                                CONTACT
-                            </span>
-                        </button>
-                    </div>
-                </li>
             </ul>
             <div className="nav-icon" onClick={handleToggleIcon}>
                 {
