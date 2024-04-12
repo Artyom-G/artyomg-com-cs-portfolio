@@ -38,7 +38,11 @@
     --box-shadow-color: #0c38348f;
     --box-shadow-dimensions: 12px 7px 15px 0px;
     --box-shadow: var(--box-shadow-dimensions) var(--box-shadow-color);
-
+    
+    --projects-title-shadow: #092924;
+    --projects-shadow-dimensions: -12px 9px 2.2px;
+    --tag-background-color: var(--projects-title-shadow);
+    --tag-box-shadow: var(--projects-shadow-dimensions) #2f524c;
 
     /* Photography Colors
     --primary-color: #383E56;
