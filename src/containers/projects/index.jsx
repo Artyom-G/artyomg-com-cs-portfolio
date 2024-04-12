@@ -1,12 +1,33 @@
 import React from "react";
-import {BsInfoCircleFill} from 'react-icons/bs';
-import PageHeaderContent from "../../components/pageHeaderContent";
+import projects from './projects.json';
+import './styles.scss';
 
 const Projects=()=>{
     return(
-        <section id="projects" className="projects">
-            <PageHeaderContent headerText = "Projects" icon = {<BsInfoCircleFill size = {40}/>}/>
-        </section>
+        <>
+            <ul className="projects" >
+                {
+                    projects.projects.map((item, key) => (
+                        <li key={key} className="projects__item">
+                            <div className="projects__item__banner">
+                                <h1>{item.title}</h1>
+                                <img src={require(`./${item.image}`)} alt={item.title} />
+                            </div>
+                            <div className="projects__item__tags">
+
+                            </div>
+                            <div className="projects__item__links">
+
+                            </div>
+                            <p className="projects__item__description">
+                                {item.description}
+                            </p>
+
+                        </li>
+                    ))
+                }
+            </ul>
+        </>
     )
 }
 export default Projects;
