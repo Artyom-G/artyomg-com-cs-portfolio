@@ -5,11 +5,11 @@ import { ReactComponent as Logo } from "./artyomg-logo.svg";
 
 const RoundLoadButton = () => {
     return (
-        <div class="scroll">
-            <svg class="circle" width="32px" height="32px" viewBox="0 0 32 32">
+        <div className="scroll">
+            <svg className="circle" width="32px" height="32px" viewBox="0 0 32 32">
                 <circle cx="16" cy="16" r="15"></circle>
             </svg>
-            <svg class="circle_container" viewBox="0 0 32 32">
+            <svg className="circle_container" viewBox="0 0 32 32">
                 <circle cx="16" cy="16" r="15"></circle>
             </svg>
                 <Link to={'/'} className="logo">

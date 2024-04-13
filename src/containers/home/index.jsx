@@ -12,7 +12,7 @@ const Home=()=>{
     }
 
     return(
-        <selection id="home" className="home">
+        <div id="home" className="home">
             <div className="home__text-wrapper">
                 <h1>
                     Hello, I am Artyom
@@ -30,7 +30,7 @@ const Home=()=>{
                     </button>
                 </div>
             </Animate>
-        </selection>
+        </div>
     )
 }
 export default Home;

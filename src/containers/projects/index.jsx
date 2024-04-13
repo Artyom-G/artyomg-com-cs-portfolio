@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import projects from './projects.json';
 import './styles.scss';
-import GistEmbed from "../../components/gistEmbed/gistEmbed";
+import GistEmbed from "../../components/gistEmbed";
 
 
 const Projects=()=>{
@@ -43,10 +43,10 @@ const Projects=()=>{
                                 <h1>{item.title}</h1>
                                 <img src={require(`./${item.image}`)} alt={item.title} style={{ filter: `blur(${blurLevel}px) brightness(${Math.min(1-blurLevel/20, 0.9)})` }}/>
                             </div>
-                            <div className="projects__item__tags">
+                            <ul className="projects__item__tags">
                                 {
                                     item.tags.map((tag, index) => (
-                                        <li key={key} className="projects__item__tags__tag">
+                                        <li key={index} className="projects__item__tags__tag">
                                             <div>
                                                 <p>{tag}</p>
                                             </div>
@@ -54,7 +54,7 @@ const Projects=()=>{
                                         </li>
                                     ))
                                 }
-                            </div>
+                            </ul>
                             <div className="projects__item__links">
 
                             </div>
