@@ -11,14 +11,36 @@
                 "Piskel",
                 "Tilemaps"
             ],
-            "link": "",
-            "play": {
-                "playable": true,
-                "link": "https://i.simmer.io/@TurboKozel/tower-defense-2",
-                "size-x": 1100,
-                "size-y": 660
-
-            }
+            "link": "https://artyomg.itch.io/tower-defense",
+            "playable": true,
+            "embed": "<iframe src='https://i.simmer.io/@TurboKozel/tower-defense-2' width='1100' height='660' frameborder='0'></iframe>"
+        },
+        {
+            "title": "Commercial Photography Website",
+            "description": "Professional website for personal business",
+            "image": "photo.artyomg.com.jpg",
+            "tags": [
+                "React",
+                "Cybrancee",
+                "JavaScript"
+            ],
+            "link": "https://photo.artyomg.com",
+            "playable": true,
+            "embed": "<iframe src='https://artyomg.com' width='1100' height='660' frameborder='0'></iframe>"
+        },
+        {
+            "title": "Mitosis Stage Cell ML Image Sorter",
+            "description": "Machine Learning program capable of sorting images of different mitosis stages of cells",
+            "image": "ML_Image_Sorter.jpg",
+            "tags": [
+                "Python",
+                "Tensorflow",
+                "Google Colabs",
+                "Machine Learning"
+            ],
+            "link": "https://drive.google.com/file/d/18-1wQcQyEbK7ry8htFwO05ebDA2qyWfj/view?usp=sharing",
+            "playable": false,
+            "embed": "<GistEmbed></GistEmbed>"
         },
         {
             "title": "",
@@ -30,7 +52,32 @@
             ],
             "link": "",
             "playable": false,
-            "play": ""
+            "embed": ""
+        },
+        {
+            "title": "",
+            "description": "",
+            "image": "",
+            "tags": [
+                "",
+                ""
+            ],
+            "link": "",
+            "playable": false,
+            "embed": ""
+        },
+
+        {
+            "title": "",
+            "description": "",
+            "image": "",
+            "tags": [
+                "",
+                ""
+            ],
+            "link": "",
+            "playable": false,
+            "embed": ""
         }
     ]
 }
