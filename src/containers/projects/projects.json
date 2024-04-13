@@ -12,8 +12,13 @@
                 "Tilemaps"
             ],
             "link": "",
-            "playable": false,
-            "play": ""
+            "play": {
+                "playable": true,
+                "link": "https://i.simmer.io/@TurboKozel/tower-defense-2",
+                "size-x": 1100,
+                "size-y": 660
+
+            }
         },
         {
             "title": "",

@@ -60,6 +60,11 @@ const Projects=()=>{
                             <p className="projects__item__description">
                                 {item.description}
                             </p>
+                            <div className="projects__item__play">
+                                {
+                                    item.play.playable ? <iframe src="https://i.simmer.io/@TurboKozel/tower-defense-2" style={{ width: `${item.play["size-x"]}px`, height: `${item.play["size-y"]}px` }}></iframe> : <></>
+                                }
+                            </div>
 
                         </li>
                     ))

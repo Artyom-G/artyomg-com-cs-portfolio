@@ -76,6 +76,13 @@
             text-align: justify;
             color: var(--white-color);
         }
+
+        &__play{
+            padding-top: 100px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
         
     }
 }
