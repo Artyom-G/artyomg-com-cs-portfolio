@@ -3,8 +3,9 @@ import { FaBars, FaReact } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Logo } from "./artyomg-logo.svg";
 import './styles.scss';
+import CircleButton from "../circleButton";
+import Logo from './artyomg-logo.svg';
 
 const data = [
     {
@@ -19,10 +20,14 @@ const data = [
         label: 'PROJECTS',
         to: '/projects'
     },
+    {
+        label: "CONTACT",
+        to: '/contact'
+    }
 
 ]
 
-const Navbar = () => {
+const NavBar = () => {
 
     const [toggleIcon, setToggleIcon] = useState(false);
 
@@ -32,37 +37,28 @@ const Navbar = () => {
 
     const navigate = useNavigate();
 
-    const handleNavingateToContactMePage = () => {
-        navigate("/contact");
+    const handleNavingateToPage = (link) => {
+        navigate(link);
     }
 
     return (
         <nav className="navbar">
             <div className="navbar__container">
-                <Link to={'/'} className="navbar__container__logo">
+                <CircleButton logoSrc={Logo} link="/"/>
 
-                    <Logo width={40} height={40} />
-                </Link>
             </div>
             <ul className={`navbar__container__menu ${toggleIcon ? 'active' : ""} `} >
                 {
                     data.map((item, key) => (
-                        <li key={key} className="navbar__container__menu__item">
-                            <Link className="navbar__container__menu__item__links" to={item.to}>
-                                {item.label}
-                            </Link>
+                        <li key={key} className="navbar__container__menu__contact">
+                            <button onClick={() => handleNavingateToPage(item.to)}>
+                                <span className="contact-button">
+                                    {item.label}
+                                </span>
+                            </button>
                         </li>
                     ))
                 }
-                <li>
-                    <div className="navbar__container__menu__contact">
-                        <button onClick={handleNavingateToContactMePage}>
-                            <span className="contact-button">
-                                CONTACT
-                            </span>
-                        </button>
-                    </div>
-                </li>
             </ul>
             <div className="nav-icon" onClick={handleToggleIcon}>
                 {
@@ -73,4 +69,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default NavBar;

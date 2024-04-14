@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import projects from './projects.json';
 import './styles.scss';
 import GistEmbed from "../../components/gistEmbed";
-
+import CircleButton from "../../components/circleButton";
+import ArrowSVG from "./arrow.svg"
 
 const Projects=()=>{
     const [blurLevel, setBlurLevel] = useState(0);
@@ -41,27 +42,34 @@ const Projects=()=>{
                         <li key={key} className="projects__item">
                             <div className="projects__item__banner">
                                 <h1>{item.title}</h1>
-                                <img src={require(`./${item.image}`)} alt={item.title} style={{ filter: `blur(${blurLevel}px) brightness(${Math.min(1-blurLevel/20, 0.9)})` }}/>
+                                <img src={require(`./${item.image}`)} alt={item.title} style={{ filter: `blur(${blurLevel}px) brightness(${Math.min(1-blurLevel/20, 1)})` }}/>
                             </div>
-                            <ul className="projects__item__tags">
-                                {
-                                    item.tags.map((tag, index) => (
-                                        <li key={index} className="projects__item__tags__tag">
-                                            <div>
-                                                <p>{tag}</p>
-                                            </div>
-                                            
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+
+                            <div className="projects__item__info">
+                                <ul className="projects__item__info__tags">
+                                    {
+                                        item.tags.map((tag, index) => (
+                                            <li key={index} className="projects__item__info__tags__tag">
+                                                <div>
+                                                    <p>{tag}</p>
+                                                </div>
+                                                
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                                <div className="projects__item__info__link">
+                                    <CircleButton link={item.link} logoSrc={ArrowSVG}/>
+                                </div>
+                            </div>
+
                             <div className="projects__item__links">
 
                             </div>
                             <p className="projects__item__description">
                                 {item.description}
                             </p>
-                            <div className="projects__item__play">
+                            <div className="projects__item__embed">
                                 {
                                     item.playable ? <div dangerouslySetInnerHTML={{ __html: item.embed }} /> : <></>
                                 }

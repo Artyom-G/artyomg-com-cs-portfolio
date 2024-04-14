@@ -9,8 +9,7 @@ import Resume from './containers/resume';
 import Skills from './containers/skills';
 import Projects from './containers/projects';
 import About from './containers/about';
-import Navbar from './components/navBar';
-import NavbarNew from './components/navBarNew';
+import NavBar from './components/navBar';
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -45,7 +44,7 @@ function App() {
       }
 
       {/* navbar */}
-      <NavbarNew />
+      <NavBar />
 
 
       {/* main page content */}

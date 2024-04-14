@@ -1,40 +1,52 @@
-.navbar{
-    box-shadow: var(--box-shadow);
-    background-color: var(--navigation-bar-color);
+.navbar {
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: none;
+    background-color: transparent;
+    //background-color: rgba(var(--navigation-bar-color) 0.5);
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    align-items: center;
+    align-self: center;
     font-size: 1.2rem;
     position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    //width: 80%;
 
-    &__container{
+    &__container {
+        margin-top: 10px;
         display: flex;
         align-items: center;
         width: 100%;
-        height: inherit;
-        padding: 0px 20px;
+        //padding: 0px 20px;
         flex: 1;
 
-        &__logo{
-            color: var(--navigation-bar-text-color);
-            cursor: pointer;
-            z-index: 10;
-            padding-left: 10%;
-            
-        }
-
-        &__menu{
+        &__menu {
+            margin-top: 10px;
+            backdrop-filter: blur(10px);
+            border-radius: 100px;
+            //background-color: rgba(var(--navigation-bar-color) 0.5);
+            background-color: var(--navigation-bar-color);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 60px;
+            padding-right: 60px;
+            justify-content: right;
+            box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
             display: flex;
             list-style: none;
             text-align: center;
-            padding-right: 10%;
+            //padding-right: 10%;
 
-            &__item{
+
+            &__item {
                 line-height: 40px;
-                margin-right: 1.5rem;
+                padding-right: 1.5rem;
                 font-size: 1.6rem;
                 margin-top: 5px;
                 text-transform: uppercase;
@@ -42,7 +54,7 @@
                 font-size: small;
                 font-family: Arial, Helvetica, sans-serif;
 
-                &::after{
+                &::after {
                     content: '';
                     display: block;
                     height: 3px;
@@ -51,55 +63,57 @@
                     transition: all 0.5s ease;
                 }
 
-                &:hover::after{
+                &:hover::after {
                     width: 100%;
                     background: var(--navigation-bar-text-color);
                 }
 
-                &__links{
+                &__links {
                     color: var(--navigation-bar-text-color);
                     text-decoration: none;
                     padding: 0.5rem;
                 }
             }
 
-            &__contact{
+            &__contact {
 
-                button{
 
-                    box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
+                button {
+
+                    //box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
+                    box-shadow: none;
                 }
 
-                span{
+                span {
                     color: var(--navigation-bar-text-color);
                 }
 
                 button:hover {
-                    box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
+                    //box-shadow: var(--box-shadow-dimensions) var(--navigation-bar-shadow-color);
                 }
 
                 button:hover:before {
                     border-color: var(--navigation-bar-text-color);
                 }
-                
+
                 button:hover:after {
                     border-color: var(--navigation-bar-text-color);
                 }
             }
 
         }
-        
+
     }
 
 
 }
 
-.nav-icon{
+.nav-icon {
     display: none;
 }
 
-@media only screen and (max-width: 768px){
-    .navbar__container__menu{
+@media only screen and (max-width: 768px) {
+    .navbar__container__menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -111,20 +125,20 @@
         opacity: 1;
         transition: all 0.5s ease;
 
-        &.active{
+        &.active {
             background: var(--black-color);
             left: 0px;
             opacity: 1;
         }
 
-        &__item{
+        &__item {
             border-bottom: 1px solid var(--black-color);
             margin: 0px;
             padding: 20px 0px;
         }
     }
 
-    .nav-icon{
+    .nav-icon {
         display: block;
         cursor: pointer;
         color: var(--navigation-bar-text-color);

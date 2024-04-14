@@ -19,6 +19,9 @@
 
     --background-color: #093b28;
     --background-dark-color: #b8be95;
+    //--background-gradient: linear-gradient(158deg, rgba(17,111,113,1) 0%, rgba(16,112,93,1) 13%, rgba(16,112,75,1) 39%, rgba(16,80,63,1) 62%, rgba(11,51,52,1) 88%, rgba(8,32,45,1) 100%);
+    --background-gradient: linear-gradient(158deg, rgba(8,36,37,1) 0%, rgba(9,60,50,1) 13%, rgba(11,71,53,1) 39%, rgba(7,75,57,1) 62%, rgba(11,51,52,1) 88%, rgba(8,32,45,1) 100%);
+    --background-gradient-particles: linear-gradient(142deg, rgba(17,111,113,1) 0%, rgba(20,153,102,1) 10%, rgba(22,193,81,1) 23%, rgba(21,161,66,1) 47%, rgba(15,88,68,1) 74%, rgba(8,32,45,1) 100%);
 
     --white-color: #f7f8f6;
     --black-color: #100f0a;
@@ -111,7 +114,9 @@ html {
 body {
     /*background: var(--background-color);*/
     //background-image: url("background.png");
-    background: var(--background-color);
+    //background: var(--background-color);
+    //background: var(--background-gradient);
+    background: url("background-green.png");
     background-attachment: fixed;
     background-repeat: repeat;
     background-size: cover;
@@ -192,7 +197,8 @@ p {
         margin-bottom: 20px;
     }
 
-    background-color: var(--background-color);
+    //background-color: var(--background-color);
+    background: var(--background-gradient);
     box-shadow: var(--box-shadow);
 }
 
