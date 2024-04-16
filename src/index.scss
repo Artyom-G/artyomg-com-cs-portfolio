@@ -204,7 +204,8 @@ p {
 }
 
 //BUTTONS
-button {
+button,
+.submit {
     color: var(--primary-color);
     text-decoration: none;
     cursor: pointer;
@@ -219,7 +220,8 @@ button {
     }
 }
 
-button {
+button,
+.submit {
     width: 240;
     height: auto;
     float: left;
@@ -237,7 +239,8 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-button:before {
+button:before,
+.submit:before {
     position: absolute;
     content: '';
     left: 0;
@@ -265,22 +268,40 @@ button:after {
     box-sizing: border-box;
     transform: translateX(-100%);
 }
+button:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    font-weight: 700;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-radius: 100px;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+}
 
-button:hover {
+button:hover,
+.submit:hover {
+    color: var(--white-color);
     box-shadow: var(--box-shadow);
     border-radius: 100px;
 }
 
-button:hover:before {
-    border-color: var(--primary-color);
+button:hover:before,
+.submit:hover:before {
+    border-color: var(--white-color);
     height: 100%;
     transform: translateX(0);
     transition: .3s transform linear, .3s height linear .3s;
     border-radius: 100px;
 }
 
-button:hover:after {
-    border-color: var(--primary-color);
+button:hover:after,
+.submit:hover::after {
+    border-color: var(--white-color);
     height: 100%;
     transform: translateX(0);
     transition: .3s transform linear, .3s height linear .3s;
