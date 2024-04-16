@@ -29,16 +29,14 @@ const Home=()=>{
                     />
                 </h1>
             </div>
-            <Animate play duration={1.5} delay={1} start={{transform: 'translateY(0px)'}} end={{transform: 'translateY(0px)'}}>
-                <div className="home__contact-me">
-                    <button onClick={handleNavingateToContactMePage}>
-                        <span className="contact-button">
-                            Send Me a Message
+            <div className="home__contact-me">
+                <button onClick={handleNavingateToContactMePage}>
+                    <span className="contact-button">
+                        Send Me a Message
 
-                        </span>
-                    </button>
-                </div>
-            </Animate>
+                    </span>
+                </button>
+            </div>
         </div>
     )
 }
