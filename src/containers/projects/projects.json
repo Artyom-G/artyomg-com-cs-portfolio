@@ -80,8 +80,8 @@
                 "Machine Learning"
             ],
             "link": "https://artyomg.itch.io/chess-but-but-awesome",
-            "playable": false,
-            "embed": ""
+            "playable": true,
+            "embed": "<iframe src='https://i.simmer.io/@TurboKozel/hexapawn-ai' style='width:1000px;height:562px'></iframe>"
         },
         {
             "title": "Pokemon Showdown Minimax AI Bot",
