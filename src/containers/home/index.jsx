@@ -20,7 +20,7 @@ const Home=()=>{
                     Fullstack Developer
                 </h1>
             </div>
-            <Animate play duration={1.5} delay={1} start={{transform: 'translateY(550px)'}} end={{transform: 'translateY(0px)'}}>
+            <Animate play duration={1.5} delay={1} start={{transform: 'translateY(0px)'}} end={{transform: 'translateY(0px)'}}>
                 <div className="home__contact-me">
                     <button onClick={handleNavingateToContactMePage}>
                         <span className="contact-button">

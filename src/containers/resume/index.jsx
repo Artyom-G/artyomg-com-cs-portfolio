@@ -4,9 +4,8 @@ import './styles.scss';
 
 const Resume = () => {
     return (
-        <div className='alt2'>
-            <h2>Resume</h2>
-            <div className='resumePdf'>
+        <div className='page'>
+            <div className='page__resumePdf'>
                 <embed src={resumePdf} type="application/pdf"/>
             </div>
         </div>

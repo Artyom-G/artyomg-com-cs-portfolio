@@ -1,119 +1,21 @@
-.alt2{
-    margin-top: 100px;
+.page{
+    position: relative;
     height: 95%;
-}
+    width: 100%;
 
-.resumePdf{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    embed {
-        padding-top: 20px;
-      width: 100%;
-      height: 100%;
-    }
-}
-
-.resume{
-    &__content{
+    &__resumePdf{
         height: 100%;
-        width: 100%;
         display: flex;
         flex-direction: column;
-        margin: auto;
-    
-        &__header{
-            
-            h1{
-                margin-top: 30px;
-                margin-bottom: 10px;
-                font-size: 5rem;
-                font-weight: 700;
-                text-align: right;
-                color: var(--primary-color);
-            }
-        
-            h3{
-                margin-bottom: 10px;
-                font-size: 1.5rem;
-                font-weight: 700;
-                text-align: right;
-                color: var(--primary-color);
-            }
-            
+        align-items: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 50px;
+
+        embed {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
         }
-
-        &__body{
-
-
-            &__education{
-                
-                &__body{
-                    display: flex;
-                    flex-direction: row;
-                    list-style-type: none; // Remove the default bullet point
-                    padding: 0; // Remove any default padding on the list
-    
-                    &__uni{
-                        display: flex;
-                        flex-direction: column;
-    
-                        &__name{
-                            //margin-top: 30px;
-                            //margin-bottom: 10px;
-                            font-size: 1.7rem;
-                            font-weight: 600;
-                            text-align: left;
-                            color: var(--primary-color);
-                        }
-    
-                        &__major{
-                            //margin-top: 30px;
-                            //margin-bottom: 0px;
-                            font-size: 1.7rem;
-                            font-weight: 400;
-                            text-align: left;
-                            color: var(--primary-color);
-                        }
-    
-                        &__minor{
-                            margin-top: -20px;
-                            margin-bottom: 10px;
-                            font-size: 1.3rem;
-                            font-weight: 400;
-                            text-align: left;
-                            color: var(--primary-color);
-                            opacity: 0.7;
-                        }
-    
-                        &__tags{
-                            display: flex;
-                            flex-direction: row;
-                            font-size: 1.3rem;
-                            font-weight: 400;
-                            color: var(--primary-color);
-                            //opacity: 0.7;
-                            list-style-type: none; 
-                            padding: 0; 
-
-                            li{
-                                margin-right: 30px;
-                            }
-                        }
-    
-                    }
-    
-                    &__unidate{
-                        margin-left: auto;
-                        text-align: right;
-                        
-                    }
-
-                }
-            }
-        }
-        
     }
 }

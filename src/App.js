@@ -39,19 +39,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* particles_home js */}
       {
-        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles_home} particlesLoaded={particlesLoaded} /> : <div />
-      }
-      {
-        init && location.pathname === "/projects" ? <Particles id="tsparticles" options={particles_projects} particlesLoaded={particlesLoaded} /> : <div />
+        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles_home} particlesLoaded={particlesLoaded} /> : <Particles id="tsparticles" options={particles_projects} particlesLoaded={particlesLoaded} />
       }
 
-      {/* navbar */}
       <NavBar />
 
-
-      {/* main page content */}
       <div className='App__main-page-content'>
         <Routes>
           <Route index path='/' element={<Home />} />
