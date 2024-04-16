@@ -2,7 +2,8 @@ import './App.scss';
 import { Routes, Route, useLocation } from 'react-router-dom'
 //import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-import particles from './utils.js/particles';
+import particles_home from './containers/home/particles_home';
+import particles_projects from './containers/projects/particles_projects';
 import Home from './containers/home';
 import Contact from './containers/contact';
 import Resume from './containers/resume';
@@ -38,9 +39,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* particles js */}
+      {/* particles_home js */}
       {
-        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles} particlesLoaded={particlesLoaded} /> : <div />
+        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles_home} particlesLoaded={particlesLoaded} /> : <div />
+      }
+      {
+        init && location.pathname === "/projects" ? <Particles id="tsparticles" options={particles_projects} particlesLoaded={particlesLoaded} /> : <div />
       }
 
       {/* navbar */}
