@@ -66,9 +66,11 @@ const Projects=()=>{
                             <div className="projects__item__links">
 
                             </div>
-                            <p className="projects__item__description">
-                                {item.description}
-                            </p>
+                            <div className="projects__item__description">
+                                <p>
+                                    {item.description}
+                                </p>
+                            </div>
                             <div className="projects__item__embed">
                                 {
                                     item.playable ? <div dangerouslySetInnerHTML={{ __html: item.embed }} /> : <></>
