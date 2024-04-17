@@ -34,6 +34,11 @@ const Projects=()=>{
         };
     }, []);
 
+    const togglePointerEvents = () => {
+        const iframe = document.querySelector('.projects__item__embed__overlay');
+        iframe.style.height = "0px";
+    }
+
     return(
         <>
             <ul className="projects">
@@ -75,6 +80,7 @@ const Projects=()=>{
                                 {
                                     item.playable ? <div dangerouslySetInnerHTML={{ __html: item.embed }} /> : <></>
                                 }
+                                <div className="projects__item__embed__overlay" onClick={togglePointerEvents}></div>
                             </div>
                             
 

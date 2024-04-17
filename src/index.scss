@@ -44,7 +44,8 @@
     
     --projects-title-shadow: #092924;
     --projects-shadow-dimensions: -12px 9px 2.2px;
-    --tag-background-color: #16412881;
+    //--tag-background-color: #16412881;
+    --tag-background-color: var(--primary-color);
     --tag-box-shadow: var(--projects-shadow-dimensions) #2f524c;
     --projects-text-color: var(--white-color);
 

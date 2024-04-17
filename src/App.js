@@ -40,7 +40,10 @@ function App() {
   return (
     <div className="App">
       {
-        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles_home} particlesLoaded={particlesLoaded} /> : <Particles id="tsparticles" options={particles_projects} particlesLoaded={particlesLoaded} />
+        init && location.pathname === "/" ? <Particles id="tsparticles" options={particles_home} particlesLoaded={particlesLoaded} /> : <></>
+      }
+      {
+        init && (location.pathname === "/projects" || location.pathname === "/resume" || location.pathname === "/contact") ? <Particles id="tsparticles" options={particles_projects} particlesLoaded={particlesLoaded} /> : <></>
       }
 
       <NavBar />
